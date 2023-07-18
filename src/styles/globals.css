@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Batman Forever";
+  src: url("../fonts/Batman/batmfa__.woff");
+}
+
+/* ???? Определить что именно нужно */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+    color: #fff;
+  }
+  body {
+    color: #fff;
+    background: #1c1c1e;
+    position: relative;
+  }
+}
+
+main {
+  background-color: #1c1c1e;
+}
+
+@layer components {
+  .section-title {
+    @apply font-heading text-[30px] lg:text-[50px];
+  }
+  .container-base {
+    @apply container mx-auto max-w-[1360px] px-5;
+  }
+}
